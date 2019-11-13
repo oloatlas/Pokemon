@@ -1,14 +1,25 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package control;
 
-/**
- *
- * @author 20416529
- */
+import model.Jogador;
+
+
 public class Jogo {
-    
-}
+      private Jogador jogador;
+
+    public Jogo(Jogador jogador) {
+        this.jogador = jogador;
+    }
+
+    public Jogador getJogador() {
+        return jogador;
+    }
+
+    public void setJogador(Jogador jogador) {
+        this.jogador = jogador;
+    }
+
+    public void puxaCartas(){}
+       
+    }
+   
