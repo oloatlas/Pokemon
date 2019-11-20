@@ -1,0 +1,24 @@
+package pokemoncard;
+
+public class PokemonCard {    
+    public static void main(String[] args) {
+        
+        Jogador j1 = new Jogador("jonatas",3);
+        
+        System.out.println("Primero jogador na arena " );
+        System.out.println(j1);
+        System.out.println(j1.getDeck().getSize());
+        
+        Jogador j2 = new Jogador("larissa",3);
+        
+       System.out.println("Segundo jogador na arena " );
+       System.out.println(j2);
+       System.out.println(j2.getDeck().getSize());
+        
+ 
+       
+    }
+
+    
+    
+}
