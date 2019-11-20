@@ -1,34 +1,24 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package model;
 
-/**
- *
- * @author 20416529
- */
-public class Carta {
+package pokemoncard;
 
-    private TipoCarta tipo;
 
-    public Carta(TipoCarta tipo) {
+public abstract class Carta {
+    
+    private Tipo tipo;
+
+    public Carta() {}
+    
+    public Carta(Tipo tipo) {
         this.tipo = tipo;
     }
 
-    public TipoCarta getTipo() {
+    public Tipo getTipo() {
         return tipo;
     }
 
-    public void setTipo(TipoCarta tipo) {
+    public void setTipo(Tipo tipo) {
         this.tipo = tipo;
     }
 
-    @Override
-    public String toString() {
-        StringBuilder msg = new StringBuilder();
-        msg.append(tipo).append(" : ");
-        return msg.toString();
-    }
+    
 }
