@@ -1,34 +1,27 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package model;
+package pokemoncard;
 
-/**
- *
- * @author 20416529
- */
+
 public class Energia  extends Carta{
-    private Elemento elemento;
+    private TipoElemento elemento;
     
-    public Energia(TipoCarta tipo, Elemento elemento) {
+    public Energia(Tipo tipo, TipoElemento elemento) {
         super(tipo);
         this.elemento = elemento;
     }
 
-    public Elemento getElemento() {
+    public TipoElemento getElemento() {
         return elemento;
     }
 
-    public void setElemento(Elemento elemento) {
+    public void setElemento(TipoElemento elemento) {
         this.elemento = elemento;
     }
-    
+
     @Override
-    public String toString(){
-        StringBuilder msg = new StringBuilder();
-        msg.append(super.toString()).append(elemento);
-        return msg.toString();
+    public String toString() {
+        return "Energia{\n\t" + "elemento=" 
+                + elemento + "\n}";
     }
+    
+    
 }
