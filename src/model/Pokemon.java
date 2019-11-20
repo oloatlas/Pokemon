@@ -1,36 +1,29 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package model;
+package pokemoncard;
 
-/**
- *
- * @author 20416529
- */
-public class Pokemon extends Carta{
+
+    public class Pokemon extends Carta{
     
-    private Elemento elemento;
+    private TipoElemento elemento;
     private String nome;
     private int HP;
     private int forca;
     private int qtdEnergia;
+    private boolean ataque;
 
-    public Pokemon(TipoCarta tipo, Elemento elemento, String nome, int HP, int forca, int qtdEnergia) {
+    public Pokemon(Tipo tipo, TipoElemento elemento, String nome, int HP, int forca, int qtdEnergia) {
         super(tipo);
-        this.elemento = elemento;
         this.nome = nome;
+        this.elemento = elemento;
         this.HP = HP;
         this.forca = forca;
         this.qtdEnergia = qtdEnergia;
     }
 
-    public Elemento getElemento() {
+    public TipoElemento getElemento() {
         return elemento;
     }
 
-    public void setElemento(Elemento elemento) {
+    public void setElemento(TipoElemento elemento) {
         this.elemento = elemento;
     }
 
@@ -66,10 +59,31 @@ public class Pokemon extends Carta{
         this.qtdEnergia = qtdEnergia;
     }
 
+    public void incQtdEnergia() {
+        this.qtdEnergia++;
+    }
+
+    public void decQtdEnergia() {
+        this.qtdEnergia--;
+    }
+
+    public boolean isAtaque() {
+        return ataque;
+    }
+
+    public void setAtaque(boolean ataque) {
+        this.ataque = ataque;
+    }
+
     @Override
     public String toString() {
-        StringBuilder msg = new StringBuilder();
-        msg.append(super.toString()).append(elemento).append(" - ").append(nome).append(" - ").append(HP).append(" - ").append(forca).append(" - ").append(qtdEnergia);
-        return msg.toString();
+        return "Pokemon{\n\t" + "elemento=" + 
+                elemento + ",\n\tnome=" + 
+                nome + ",\n\tHP=" + 
+                HP + ",\n\tforca=" + 
+                forca + ",\n\tqtdEnergia=" + 
+                qtdEnergia + "\n}";
     }
+
+    
 }
